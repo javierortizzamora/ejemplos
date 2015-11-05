@@ -7,6 +7,55 @@
 
 
 
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		TelephonyManager tel = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+		String text = String.format("<b>SIM Operator</b>:   %s<br>"
+				+ "<b>Network Operator</b>:   %s<br>"
+				+ "<b>Carrier country code</b>:   %s<br>"
+				+ "<b>Line number</b>:   %s<br>"
+				+ "<b>Sim serial number</b>:   %s<br>"
+				+ "<b>Subscribed id (IMSI)</b>:   %s<br>"
+				+ "<b>Network type</b>:   %s<br>"
+				// + "<b>Cell info</b>:   %s<br>"
+				+ "<b>Cell location</b>:   %s<br>"
+				+ "<b>Cell ID</b>:   %s<br>"
+
+
+
+
 echo "# ejemplos" >> README.md
 git init
 git add README.md
